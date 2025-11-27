@@ -19,7 +19,8 @@ function procesarCompra(cliente, productos) {
         const nuevoCliente = { ...cliente };
         // Calcular el total de productos comprados
         const totalProductos = productos.length;
-        // Calcular el precio total de los productos comprados usando reduce
+        // Calcular el precio total de los productos comprados usando reduce, en lugar de un bucle for debido a las restricciones
+        // reduce itera sobre cada producto y acumula el precio total
         const precioTotal = productos.reduce((sum, producto) => sum + producto.precio, 0);
         // Separar el primer producto del resto
         const primerProducto = productos[0];
